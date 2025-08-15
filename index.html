@@ -536,14 +536,19 @@
 
     <!-- Music Player -->
     <div class="music-player" id="musicPlayer">
-        <audio id="backgroundMusic" loop>
+        <audio id="backgroundMusic" loop preload="auto">
+            <source src="Feel-the-Burn.mp3" type="audio/mpeg">
             <source src="Feel the Burn.mp3" type="audio/mpeg">
+            <source src="Feel%20the%20Burn.mp3" type="audio/mpeg">
+            <!-- Fallback to a web-hosted fitness music if local file fails -->
+            <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
             Your browser does not support the audio element.
         </audio>
         <button class="music-control" id="musicControl" onclick="toggleMusic()">
             <i class="fas fa-volume-up" id="musicIcon"></i>
         </button>
         <div class="music-status" id="musicStatus">Click to enable music</div>
+        <button class="music-test-btn" onclick="testAudio()">Test Audio</button>
     </div>
 
     <!-- Modal -->

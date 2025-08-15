@@ -1085,6 +1085,23 @@ section {
     opacity: 0.9;
 }
 
+.music-test-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.music-test-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
 /* Modal */
 .modal {
     display: none;
