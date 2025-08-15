@@ -122,7 +122,6 @@ function initMusicPlayer() {
     // Check if audio file loaded successfully
     audio.addEventListener('loadeddata', () => {
         console.log('Audio file loaded successfully');
-        document.getElementById('musicStatus').textContent = 'Music ready - click to play';
     });
     
     audio.addEventListener('canplay', () => {
@@ -169,20 +168,15 @@ function initMusicPlayer() {
     
     // Update music icon based on state
     function updateMusicIcon() {
-        const musicStatus = document.getElementById('musicStatus');
-        
         if (isMusicMuted) {
             musicIcon.className = 'fas fa-volume-mute';
             musicControl.classList.add('muted');
-            musicStatus.textContent = 'Music muted';
         } else if (isMusicPlaying) {
             musicIcon.className = 'fas fa-volume-up';
             musicControl.classList.remove('muted');
-            musicStatus.textContent = 'Music playing';
         } else {
             musicIcon.className = 'fas fa-volume-up';
             musicControl.classList.remove('muted');
-            musicStatus.textContent = 'Click to enable music';
         }
     }
     
@@ -218,35 +212,7 @@ function toggleMusic() {
     }
 }
 
-// Test Audio Function
-function testAudio() {
-    const audio = document.getElementById('backgroundMusic');
-    const musicStatus = document.getElementById('musicStatus');
-    
-    musicStatus.textContent = 'Testing audio...';
-    
-    // Try to play a short test
-    audio.currentTime = 0;
-    audio.volume = 0.3;
-    
-    audio.play().then(() => {
-        musicStatus.textContent = 'Audio test successful!';
-        setTimeout(() => {
-            audio.pause();
-            audio.currentTime = 0;
-            musicStatus.textContent = 'Audio ready - click to play';
-        }, 2000);
-    }).catch(error => {
-        console.error('Audio test failed:', error);
-        musicStatus.textContent = 'Audio test failed - check console';
-        
-        // Show detailed error info
-        if (audio.error) {
-            console.error('Audio error code:', audio.error.code);
-            console.error('Audio error message:', audio.error.message);
-        }
-    });
-}
+
 
 // Animated Counter Function
 function initCounters() {
