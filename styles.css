@@ -1073,6 +1073,18 @@ section {
     box-shadow: 0 12px 30px rgba(107, 114, 128, 0.4);
 }
 
+.music-status {
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    white-space: nowrap;
+    opacity: 0.9;
+}
+
 /* Modal */
 .modal {
     display: none;

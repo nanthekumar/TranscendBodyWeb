@@ -119,12 +119,26 @@ function initMusicPlayer() {
     const musicControl = document.getElementById('musicControl');
     const musicIcon = document.getElementById('musicIcon');
     
+    // Check if audio file loaded successfully
+    audio.addEventListener('loadeddata', () => {
+        console.log('Audio file loaded successfully');
+    });
+    
+    audio.addEventListener('error', (e) => {
+        console.error('Audio loading error:', e);
+        showModal('Audio Error', 'Unable to load music file. Please check your internet connection.');
+    });
+    
     // Try to play music when user interacts with the page
     const playMusic = () => {
         if (!isMusicMuted) {
+            // Set volume to a reasonable level
+            audio.volume = 0.7;
+            
             audio.play().then(() => {
                 isMusicPlaying = true;
                 updateMusicIcon();
+                console.log('Music started playing');
             }).catch(error => {
                 console.log('Auto-play prevented:', error);
                 // Show a message to user about enabling audio
@@ -136,17 +150,26 @@ function initMusicPlayer() {
     // Add click event to the entire page to enable audio
     document.addEventListener('click', playMusic, { once: true });
     
+    // Also try to play on any user interaction
+    document.addEventListener('keydown', playMusic, { once: true });
+    document.addEventListener('touchstart', playMusic, { once: true });
+    
     // Update music icon based on state
     function updateMusicIcon() {
+        const musicStatus = document.getElementById('musicStatus');
+        
         if (isMusicMuted) {
             musicIcon.className = 'fas fa-volume-mute';
             musicControl.classList.add('muted');
+            musicStatus.textContent = 'Music muted';
         } else if (isMusicPlaying) {
             musicIcon.className = 'fas fa-volume-up';
             musicControl.classList.remove('muted');
+            musicStatus.textContent = 'Music playing';
         } else {
             musicIcon.className = 'fas fa-volume-up';
             musicControl.classList.remove('muted');
+            musicStatus.textContent = 'Click to enable music';
         }
     }
     
@@ -164,7 +187,11 @@ function toggleMusic() {
         isMusicMuted = false;
         audio.muted = false;
         if (isMusicPlaying) {
-            audio.play();
+            audio.play().then(() => {
+                console.log('Music resumed');
+            }).catch(error => {
+                console.error('Error resuming music:', error);
+            });
         }
         musicIcon.className = 'fas fa-volume-up';
         musicControl.classList.remove('muted');
@@ -174,6 +201,7 @@ function toggleMusic() {
         audio.muted = true;
         musicIcon.className = 'fas fa-volume-mute';
         musicControl.classList.add('muted');
+        console.log('Music muted');
     }
 }
 
