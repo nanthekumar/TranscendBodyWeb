@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TranscendBody - Transform Your Life</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>TranscendBody</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#programs" class="nav-link">Programs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Transform Your Body, Transform Your Life</h1>
+                <p class="hero-subtitle">Join our comprehensive fitness program designed to help you achieve your goals through personalized training, nutrition guidance, and community support.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="startWorkout()">Start Your Journey</button>
+                    <button class="btn btn-secondary" onclick="scrollToPrograms()">View Programs</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-visual">
+                    <div class="hero-main-image">
+                        <div class="fitness-image-container">
+                            <div class="fitness-icon">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div class="fitness-elements">
+                                <div class="element element-1">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="element element-2">
+                                    <i class="fas fa-running"></i>
+                                </div>
+                                <div class="element element-3">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Fitness Excellence</h3>
+                                <p>Professional Training</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-stats">
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="500">0</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="95">0</div>
+                            <div class="stat-label">Success Rate %</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About TranscendBody</h2>
+                <p>We're more than just a fitness program - we're your transformation partner</p>
+            </div>
+            <div class="fitness-motivator">
+                <div class="motivator-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <p>"Transform your body, ignite your spirit, transcend your limits"</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>To empower individuals to achieve their fitness goals through science-based training, personalized nutrition plans, and unwavering support from our community.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h4>500+</h4>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>50+</h4>
+                            <p>Expert Trainers</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>95%</h4>
+                            <p>Success Rate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitness Equipment Showcase -->
+    <section class="equipment-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2>State-of-the-Art Equipment</h2>
+                <p>Train with the best tools for maximum results</p>
+            </div>
+            <div class="equipment-grid">
+                <div class="equipment-item">
+                    <div class="equipment-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h4>Free Weights</h4>
+                    <p>Dumbbells, barbells, and kettlebells</p>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h4>Cardio Machines</h4>
+                    <p>Treadmills, ellipticals, and bikes</p>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h4>Resistance Machines</h4>
+                    <p>Targeted muscle group training</p>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-icon">
+                        <i class="fas fa-yoga"></i>
+                    </div>
+                    <h4>Functional Training</h4>
+                    <p>TRX, medicine balls, and more</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive fitness solutions tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <div class="service-visual">
+                            <i class="fas fa-dumbbell"></i>
+                            <div class="service-bg"></div>
+                        </div>
+                    </div>
+                    <h3>Personal Training</h3>
+                    <p>One-on-one sessions with certified trainers to help you reach your specific goals.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <div class="service-visual nutrition">
+                            <i class="fas fa-apple-alt"></i>
+                            <div class="service-bg"></div>
+                        </div>
+                    </div>
+                    <h3>Nutrition Coaching</h3>
+                    <p>Personalized meal plans and nutrition guidance to fuel your transformation.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <div class="service-visual group">
+                            <i class="fas fa-users"></i>
+                            <div class="service-bg"></div>
+                        </div>
+                    </div>
+                    <h3>Group Classes</h3>
+                    <p>High-energy group sessions that combine cardio, strength, and flexibility training.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <div class="service-visual mobile">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div class="service-bg"></div>
+                        </div>
+                    </div>
+                    <h3>Mobile App</h3>
+                    <p>Track your progress, access workouts, and stay connected with your trainers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Real stories from real people who transformed their lives</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"TranscendBody completely changed my approach to fitness. The personalized programs and expert guidance helped me lose 30 pounds and gain confidence."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <span>Lost 30 lbs in 6 months</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The Pro program exceeded my expectations. My trainer pushed me to limits I never thought possible, and the results speak for themselves."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Mike Chen</h4>
+                                <span>Gained 15 lbs muscle</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"As a beginner, I was nervous about starting my fitness journey. The supportive community and structured approach made all the difference."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Emma Davis</h4>
+                                <span>First-time fitness enthusiast</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fitness Programs</h2>
+                <p>Choose the program that fits your lifestyle and goals</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon beginner">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Beginner</h3>
+                        <div class="price">$29<span>/month</span></div>
+                    </div>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check"></i> Basic workout plans</li>
+                        <li><i class="fas fa-check"></i> Nutrition basics</li>
+                        <li><i class="fas fa-check"></i> Community access</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="selectProgram('beginner')">Get Started</button>
+                </div>
+                <div class="program-card featured">
+                    <div class="program-header">
+                        <div class="program-icon pro">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3>Pro</h3>
+                        <div class="price">$79<span>/month</span></div>
+                    </div>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check"></i> Personalized training</li>
+                        <li><i class="fas fa-check"></i> Custom meal plans</li>
+                        <li><i class="fas fa-check"></i> 1-on-1 coaching</li>
+                        <li><i class="fas fa-check"></i> Progress tracking</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="selectProgram('pro')">Get Started</button>
+                </div>
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon master">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3>Master</h3>
+                        <div class="price">$149<span>/month</span></div>
+                    </div>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check"></i> Elite training</li>
+                        <li><i class="fas fa-check"></i> Advanced nutrition</li>
+                        <li><i class="fas fa-check"></i> 24/7 support</li>
+                        <li><i class="fas fa-check"></i> Exclusive content</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="selectProgram('master')">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitness Gallery Section -->
+    <section class="fitness-gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fitness in Action</h2>
+                <p>See the energy and dedication that drives our community</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-visual strength">
+                        <i class="fas fa-dumbbell"></i>
+                        <div class="gallery-overlay">
+                            <h4>Strength Training</h4>
+                            <p>Build muscle and power</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-visual cardio">
+                        <i class="fas fa-heart"></i>
+                        <div class="gallery-overlay">
+                            <h4>Cardio Fitness</h4>
+                            <p>Boost endurance and stamina</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-visual yoga">
+                        <i class="fas fa-pray"></i>
+                        <div class="gallery-overlay">
+                            <h4>Mind & Body</h4>
+                            <p>Flexibility and balance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-visual nutrition">
+                        <i class="fas fa-apple-alt"></i>
+                        <div class="gallery-overlay">
+                            <h4>Nutrition</h4>
+                            <p>Fuel your transformation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-visual group">
+                        <i class="fas fa-users"></i>
+                        <div class="gallery-overlay">
+                            <h4>Group Energy</h4>
+                            <p>Motivation through community</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-visual results">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="gallery-overlay">
+                            <h4>Results</h4>
+                            <p>Track your progress</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Transformation?</h2>
+                <p>Join thousands of people who have already transformed their lives with TranscendBody</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="scrollToPrograms()">Choose Your Program</button>
+                    <button class="btn btn-outline" onclick="scrollToContact()">Get in Touch</button>
+                </div>
+            </div>
+        </div>
+        <div class="cta-bg"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to start your transformation? Contact us today!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="program" name="program" required>
+                                <option value="">Select Program</option>
+                                <option value="beginner">Beginner</option>
+                                <option value="pro">Pro</option>
+                                <option value="master">Master</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>68 Orchard Road, #03-01, Plaza Singapura, Singapore 238839</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@transcendbody.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TranscendBody</h3>
+                    <p>Transform your body, transform your life with our comprehensive fitness programs.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TranscendBody. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <audio id="backgroundMusic" loop>
+            <source src="feel the burn.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button class="music-control" id="musicControl" onclick="toggleMusic()">
+            <i class="fas fa-volume-up" id="musicIcon"></i>
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Welcome!</h2>
+            <p id="modalMessage">Thank you for choosing TranscendBody!</p>
+            <button class="btn btn-primary" onclick="closeModal()">Continue</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
