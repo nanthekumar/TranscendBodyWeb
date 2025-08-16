@@ -1,148 +1,141 @@
-# TranscendBody - Fitness Transformation Website
+# TranscendBody — Fitness Transformation Website
 
-A modern, responsive fitness website inspired by the Superlife Fitness design, built with HTML, CSS, and JavaScript. This website is designed to be hosted on GitHub Pages and provides a comprehensive fitness platform experience.
+**Transcend Within. From Victim to Creator.**
 
-## 🌟 Features
+A modern, responsive fitness website that showcases the TranscendBody approach across Workouts, Nutrition, Recovery, and Mindset. Built with HTML, CSS, and JavaScript, designed for GitHub Pages, and optimized for clean UX, accessibility, and performance.
 
-- **Responsive Design**: Mobile-first approach that works perfectly on all devices
-- **Modern UI/UX**: Clean, professional design with smooth animations
-- **Interactive Elements**: Hover effects, smooth scrolling, and engaging animations
-- **Animated Counters**: Dynamic statistics with smooth counting animations
-- **Testimonials**: Client success stories with star ratings
-- **Call-to-Action**: Compelling sections to drive user engagement
+This website is the public-facing home for the TranscendBody ecosystem (daily tracker app, coaching, and programs). It's built to be fast, clear, and brand-consistent—and future-ready for AI automation and personal coaching agents.
 
-- **Contact Form**: Functional contact form with validation
-- **Program Selection**: Interactive fitness program selection system
-- **Mobile Navigation**: Hamburger menu for mobile devices
-- **Performance Optimized**: Smooth animations and optimized scrolling
+## ✨ Highlights
 
-## 🚀 Getting Started
+- Mobile-first, responsive UI with clean typography (Inter), modern layout (Grid/Flex), and smooth micro-interactions.
+- Clear conversion flow: hero CTA → programs → testimonials → contact.
+- Interactive details: hover states, smooth scrolling, animated counters, and active menu highlights.
+- Performance-minded: lazy assets, throttled scroll handlers, Intersection Observer for reveal animations.
+- Accessible by default: semantic HTML, ARIA where needed, focus states, and color-contrast checks.
+- Pages-ready: zero build tools, works on any static host; GitHub Pages in minutes.
 
-### Prerequisites
-- A modern web browser
-- GitHub account (for hosting)
+## 🧭 Information Architecture
 
-### Installation
-1. Clone or download this repository
-2. Open `index.html` in your web browser
-3. The website is ready to use!
+- **Hero** — Power headline, subhead, CTA
+- **About** — What TranscendBody is, who it's for
+- **Programs** — Beginner / Pro / Master tiers (pricing optional)
+- **Services** — Coaching, assessments, routines, recovery protocols
+- **Testimonials** — Social proof with star ratings
+- **Stats** — Animated counters (e.g., sessions, lbs lost, habits built)
+- **CTA** — Book a consult / Start 90-day plan
+- **Contact** — Validated form + socials
+- **Footer** — Links, legal, brand note
 
-### Hosting on GitHub Pages
-1. Create a new repository on GitHub
-2. Upload all project files to the repository
-3. Go to Settings > Pages
-4. Select source branch (usually `main` or `master`)
-5. Your website will be available at `https://yourusername.github.io/repositoryname`
+## 🧩 Tech Stack
 
-## 📁 Project Structure
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Layout**: CSS Grid + Flexbox
+- **Icons**: Font Awesome (or local SVGs)
+- **Charts** (optional): Chart.js if you add lightweight dashboards later
+- **Hosting**: GitHub Pages (no server dependencies)
+
+## 🚀 Quick Start
+
+### 1) Run locally
+
+```bash
+# Clone
+git clone https://github.com/<your-username>/TranscendBodyWeb.git
+cd TranscendBodyWeb
+
+# Open locally
+# Option A: double-click index.html
+# Option B: simple static server (Python3)
+python3 -m http.server 8080
+# Visit http://localhost:8080
+```
+
+## 🗂️ Project Structure
 
 ```
 TranscendBodyWeb/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styling and responsive design
-├── script.js           # JavaScript functionality
-├── README.md           # Project documentation
-└── transcendbody_website_prd.docx  # Project requirements document
+├─ index.html                   # Landing + all sections
+├─ styles.css                   # Base styles, variables, utilities, components
+├─ script.js                    # Interactions (menu, counters, scroll, form)
+├─ /assets
+│  ├─ /images                   # Hero, testimonials, logos, icons
+│  └─ /icons                    # SVGs (preferred)
+├─ /docs
+│  └─ transcendbody_website_prd.docx  # Product requirements (reference)
+└─ README.md                    # You are here
 ```
 
-## 🎨 Design Features
-
-- **Color Scheme**: Modern gradient backgrounds with professional color palette
-- **Typography**: Inter font family for clean, readable text
-- **Animations**: Smooth hover effects and scroll-triggered animations
-- **Icons**: Font Awesome icons for visual appeal
-- **Layout**: CSS Grid and Flexbox for responsive layouts
-
-## 🔧 Functionality
+## 🔧 Feature Details
 
 ### Navigation
-- Fixed navigation bar with smooth scrolling
-- Mobile-responsive hamburger menu
-- Active state indicators
+- Sticky, auto-highlighted links; accessible hamburger on mobile; reduced motion support.
 
-### Hero Section
-- Compelling call-to-action
-- Hero image with overlay text
-- Animated statistics counters
-- Responsive button layout
+### Hero
+- Compelling headline + subhead; primary CTA → Programs; secondary CTA → Contact.
 
-### Services & Programs
-- Interactive service cards
-- Pricing tiers (Beginner, Pro, Master)
-- Hover effects and animations
-- Client testimonials with ratings
-- Call-to-action sections
+### Programs & Services
+- Three clear tiers (Beginner, Pro, Master) with bullets, inclusions, and an action button.
 
-### Contact Form
-- Form validation
-- Success/error messages
-- Responsive layout
+### Testimonials
+- Cards with avatar, rating stars, brief quote (2–3 lines), name, and result.
 
+### Stats / Counters
+- Intersection Observer triggers count-ups; numbers are data-attributes for easy edits.
 
+### Forms
+- Client-side validation, basic sanitization, success/error states.
 
-## 📱 Responsive Design
+## ⚙️ Configuration & Customization
 
-The website is fully responsive and optimized for:
-- Desktop computers
-- Tablets
-- Mobile phones
-- All screen sizes
+- **SEO**: Update `<title>`, meta description, and Open Graph/Twitter tags in `index.html`.
+- **Favicon & App Icons**: Place in `/assets/icons/` and reference in head.
+- **Analytics** (optional): Add your Plausible/GA snippet in `index.html` before `</head>`.
+- **Copy**: All headlines, CTAs, and program bullets live in `index.html` for fast iteration.
 
-## 🌐 Browser Support
+### Performance:
+- Compress images (WebP/AVIF), add explicit width/height.
+- Use `loading="lazy"` on non-hero images.
+- Defer non-critical JS.
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
+## ♿ Accessibility Checklist
 
-## 🎯 Key Sections
+- **Landmarks**: `<header>` `<nav>` `<main>` `<section>` `<footer>`
+- **Keyboard**: focus states, skip-to-content link
+- **Color contrast**: WCAG AA minimum
+- **Alt text**: descriptive, not decorative
+- **Reduced motion**: honor `prefers-reduced-motion`
 
-1. **Hero Section**: Main landing area with call-to-action
-2. **About**: Company information and statistics
-3. **Services**: Fitness service offerings
-4. **Programs**: Pricing and program details
-5. **Contact**: Contact form and information
-6. **Footer**: Links and social media
+## 🧠 Roadmap (Website)
 
-## 🚀 Performance Features
+- **AI Automation (n8n)**: auto-capture newsletter signups to CRM; trigger onboarding emails; schedule habit reminders.
+- **AI Agent (Coach)**: lightweight on-site chat that suggests routines, swaps, and grocery lists based on user inputs.
+- Blog / Articles & SEO hub
+- Multi-language i18n
+- Dark/Light theme toggle
+- Mini progress widgets (if embedding app data)
 
-- Optimized CSS animations
-- Throttled scroll events
-- Intersection Observer for animations
-- Efficient event handling
-- Minimal DOM manipulation
-
-## 🔒 Security Features
-
-- Form validation
-- XSS prevention
-- Secure audio loading
-- Input sanitization
-
-## 📈 Future Enhancements
-
-- User authentication system
-- Workout tracking
-- Progress visualization
-- Social media integration
-- Blog section
-- E-commerce functionality
+For deeper product automation, the daily tracking web app continues separately (Express + EJS + Postgres). This website remains a fast, public marketing surface.
 
 ## 🤝 Contributing
 
-This is a personal project, but suggestions and feedback are welcome!
+This is a personal project; suggestions are welcome.
 
-## 📄 License
+1. Fork → 2) Create feature branch → 3) Commit → 4) PR.
+- Use conventional commits when possible (e.g., `feat: add hero gradient option`).
 
-This project is open source and available under the [MIT License](LICENSE).
+## 📝 License
 
-## 📞 Support
+MIT — see [LICENSE](LICENSE).
 
-For questions or support, please refer to the contact form on the website.
+## 🙏 Acknowledgements
 
----
+- **Design inspiration**: Superlife-style modern fitness landing patterns.
+- **Icons**: Font Awesome / local SVGs.
+- **Type**: Inter by Rasmus Andersson.
 
-**Built with ❤️ for fitness enthusiasts everywhere**
+## 📬 Contact
 
-*Transform your body, transform your life with TranscendBody*
+Questions, collabs, or coaching inquiries: use the Contact form on the site or reach me via my socials linked in the footer.
+
+**Tagline to remember**: *Transcend Within. Build daily. Become your own proof.*
